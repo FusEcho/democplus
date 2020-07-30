@@ -19,6 +19,7 @@ add_executable(
 target_link_libraries(
     ${TARGET}
 
+    pthread
     liveMedia
     BasicUsageEnvironment
     groupsock
