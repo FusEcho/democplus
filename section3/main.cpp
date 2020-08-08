@@ -1,5 +1,6 @@
-#include <iostream>
 #include "json.hpp"
+
+#include <iostream>
 
 using json_t = nlohmann::json;
 
@@ -11,14 +12,14 @@ int main()
     j["gear"]["suits"] = "2020";
     j["jobs"] = {"superhero", "hahahh"};
 
-    std::vector<int> v = {1,2,3};
+    std::vector<int> v = {1, 2, 3};
     j["numbers"] = v;
 
-    std::map<std::string, int> m = {{"one",1}, {"two", 2}};
+    std::map<std::string, int> m = {{"one", 1}, {"two", 2}};
     j["kv"] = m;
 
     std::cout << j.dump() << std::endl;
     std::cout << j.dump(2) << std::endl;
 
     return 0;
-} 
+}

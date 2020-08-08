@@ -1,12 +1,12 @@
 #pragma once
 
+#include <atomic>
 #include <iostream>
 #include <thread>
-#include <atomic>
 // #include <memory>
-#include <mutex>
-#include <liveMedia.hh>
 #include <BasicUsageEnvironment.hh>
+#include <liveMedia.hh>
+#include <mutex>
 
 class CRtspSource
 {
@@ -19,7 +19,7 @@ public:
 
 private:
     void connect();
-    static void continueAfterDESCRIBE(RTSPClient *rtsp_client, int resultCode, char* resultString);
+    static void continueAfterDESCRIBE(RTSPClient *rtsp_client, int resultCode, char *resultString);
 
 private:
     std::atomic_bool m_bRunning;

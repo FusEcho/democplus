@@ -7,8 +7,10 @@ TabWidth: 4
 UseTab: Never
 IncludeBlocks: Regroup
 AllowShortIfStatementsOnASingleLine: false
+BreakConstructorInitializersBeforeComma: true
+AlignConsecutiveAssignments: true
 ColumnLimit: 140
-BreakBeforeBraces: Attach
+BreakBeforeBraces: Linux
 AllowShortFunctionsOnASingleLine: Empty
 AlignAfterOpenBracket: Align
 AlignConsecutiveMacros: true
