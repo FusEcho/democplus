@@ -5,21 +5,36 @@ project(APP)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-set(TARGET "APP")
-
 include_directories(
     ${CMAKE_SOURCE_DIR}
 )
 
+#-----------------------------------------------
+# build sdbus server
+#-----------------------------------------------
 add_executable(
-    ${TARGET}
+    sdbus-server
 
-    main.cpp
+    sdbus-server.cpp
 )
 
 target_link_libraries(
-    ${TARGET}
-    curl
-    pthread
-    cpr
+    sdbus-server
+
+    sdbus-c++
+)
+
+#-----------------------------------------------
+# build sdbus client
+#-----------------------------------------------
+add_executable(
+    sdbus-client
+
+    sdbus-client.cpp
+)
+
+target_link_libraries(
+    sdbus-client
+
+    sdbus-c++
 )
